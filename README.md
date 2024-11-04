@@ -2,6 +2,8 @@
 
 A web application that scans the Basechain (a Layer 2 network on Ethereum) for new token contracts and analyzes them using Token Sniffer's API. The application displays a list of new tokens along with a risk assessment indicator (e.g., green checkmark or warning symbol).
 
+Donate: Digij.eth or digij.base.eth
+
 ---
 
 ## **Table of Contents**
