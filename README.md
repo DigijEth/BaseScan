@@ -286,12 +286,6 @@ HTML template for the settings page.
 
 ---
 
-## **License**
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-
 ## **Contact**
 
 For questions or support, please open an issue on the GitHub repository or contact the maintainer.
