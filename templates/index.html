@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Crypto Scanner Results</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        .flash {
+            padding: 10px;
+            background-color: #f0ad4e;
+            color: #fff;
+            margin-bottom: 20px;
+        }
+        .success {
+            background-color: #5cb85c;
+        }
+        .warning {
+            background-color: #d9534f;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 12px;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #f4f4f4;
+            text-align: left;
+        }
+        .safe {
+            color: green;
+            font-weight: bold;
+        }
+        .scam {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Crypto Scanner Results</h1>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            {% for category, message in messages %}
+                <div class="flash {{ category }}">{{ message }}</div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+    {% if tokens %}
+    <table>
+        <thead>
+            <tr>
+                <th>Token Name</th>
+                <th>Symbol</th>
+                <th>Status</th>
+                <th>Details</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for token in tokens %}
+            <tr>
+                <td>{{ token.name }}</td>
+                <td>{{ token.symbol }}</td>
+                <td class="{% if 'Safe' in token.status %}safe{% else %}scam{% endif %}">{{ token.status }}</td>
+                <td>{{ token.message }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% else %}
+    <p>No new tokens found.</p>
+    {% endif %}
+</body>
+</html>
