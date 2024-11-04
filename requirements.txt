@@ -1,0 +1,4 @@
+Flask
+requests
+web3
+Flask_SQLAlchemy
