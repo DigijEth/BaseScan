@@ -1,20 +1,5 @@
-# BaseScan
+# BaseScan A1
 Web app Security Scanner for base chain contracts.
-
-
-**Overview**
-
-We'll implement the following changes:
-
-1. **Add User Authentication** (Recommended): Since the settings page will handle sensitive information, we'll secure it using basic authentication.
-
-2. **Create a Settings Page**: Add a route and template for the settings page where you can input and update your API keys.
-
-3. **Store API Keys Securely**: Use a local SQLite database to store the API keys securely.
-
-4. **Modify the Application to Use Stored API Keys**: Update the application logic to retrieve the API keys from the database.
-
----
 
 ### **Step-by-Step Implementation**
 
